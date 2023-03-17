@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1062601600921",
+    "project_id": "upflair-fe98b",
+    "storage_bucket": "upflair-fe98b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062601600921:android:d91236258a0625f76dad08",
+        "android_client_info": {
+          "package_name": "com.upflair"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062601600921-dlsp6bmth3v3gqnlmeror51ch3ofso04.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.upflair",
+            "certificate_hash": "adf7dde43ea4a3e48d677d40b6ee41e02ee913e3"
+          }
+        },
+        {
+          "client_id": "1062601600921-q0l93gnj9t54ltsjl88mrknt2j8ed60n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.upflair",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "1062601600921-uivrk62da9lm3gqaccckkoptoion4fqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEj9KEKFbCUAu1akPc3Kc1GdsDoPc2sM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062601600921-uivrk62da9lm3gqaccckkoptoion4fqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

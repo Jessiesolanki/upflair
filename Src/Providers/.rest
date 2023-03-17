@@ -1,0 +1,489 @@
+@access_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc3LCJpYXQiOjE2NjQxODc1NTgsImV4cCI6MTY2NDc5MjM1OH0.6gBH5zzOlP6roM6w5TiOwklugyf5v0775codwQQVf-E
+
+### list orders seller side
+POST http://54.201.160.69:3208/api/list-order
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+{
+  "type" : "1"
+}
+
+### list orders buyer side
+POST http://54.201.160.69:3208/api/listAllUserOrder
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+{
+  "type" : "0"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### add product
+POST http://54.201.160.69:3208/api/seller/addProduct
+x-access-token : {{access_token}}
+
+{
+    "product_name":"Book",
+    "description":"fddgdfgfdg",
+    "product_size_id":1,
+    "product_color_id":1,
+    "product_category_id":2,
+    "product_subcat_id":1,
+    "product_brand_id":1,
+    "bid_request":1,
+    "price":80
+}
+
+### update product
+POST http://54.201.160.69:3208/api/seller/updateProduct
+x-access-token : {{access_token}}
+
+{
+  "id": 4510,
+  "product_name": "Product 5",
+  "description": "some description",
+  "product_size_id": "1",
+  "product_color_id": "48",
+  "product_category_id": 1,
+  "product_subcat_id": 2,
+  "product_brand_id": null,
+  "user_id": 56,
+  "price": 55,
+  "bid_request": null,
+  "is_approved": 0,
+  "status": 1,
+  "quantity": 1,
+  "is_active": 0,
+  "is_deleted": 0,
+  "createdAt": "2022-04-14T12:00:02.000Z",
+  "updatedAt": "2022-04-14T12:00:02.000Z",
+  "product_imgs": [
+    {
+      "id": 102,
+      "product_id": 4510,
+      "product_img": "uploads/product/1649937600451--DBCAA7F8-804F-4839-A016-A15F8AF6FF47.jpg",
+      "createdAt": "2022-04-14T12:00:02.000Z",
+      "updatedAt": "2022-04-14T12:00:02.000Z"
+    }
+  ],
+  "category": {
+    "id": 1,
+    "category_name": "Baby Products",
+    "category_image": "uploads/category/1648710681673--lamp (1).png",
+    "status": true,
+    "commission": 40,
+    "createdAt": null,
+    "updatedAt": "2022-04-01T08:33:54.000Z"
+  },
+  "sub_category": {
+    "id": 2,
+    "category_id": 1,
+    "sub_category_name": "Mobiles",
+    "sub_category_image": "uploads/subcategory/1648561697562--avatar5.png",
+    "status": true,
+    "createdAt": "2022-03-29T13:48:17.000Z",
+    "updatedAt": "2022-03-29T13:48:17.000Z"
+  },
+  "size": {
+    "id": 1,
+    "size": "XS",
+    "createdAt": "2022-03-12T06:48:36.000Z",
+    "updatedAt": "2022-03-12T06:48:36.000Z"
+  },
+  "color": {
+    "id": 48,
+    "COL_1": "beige",
+    "COL_2": "Beige",
+    "COL_3": "#f5f5dc"
+    ,
+    "COL_4": 245,
+    "COL_5": 245,
+    "COL_6": 220,
+    "createdAt": null,
+    "updatedAt": null
+  },
+  "brand": null,
+  "name": "Aa",
+}
+
+### get categories
+GET http://54.201.160.69:3208/api/seller/getCategory
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+### get sub categories
+POST http://54.201.160.69:3208/api/seller/getSubCategory
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+{
+    "category_id" : 38
+}
+
+### get color
+GET http://54.201.160.69:3208/api/getColor
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+### get size
+GET http://54.201.160.69:3208/api/getSize
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+### add product
+POST http://54.201.160.69:3208/api/seller/getProduct
+x-access-token : {{access_token}}
+
+### get all products
+POST http://54.201.160.69:3208/api/list-all-products
+x-access-token : {{access_token}}
+Content-Type: application/json
+Accept: application/json
+
+{
+    "priceSort": "",
+    "nameSort": "desc",
+    "limit": 20,
+    "page": 0,
+    "search_key": ""
+}
+
+### get my products
+POST http://54.201.160.69:3208/api/seller/getProduct
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+{
+    "search_key":"",
+    "limit" : 10,
+    "page" : 0,
+    "status" : 1
+}
+
+### get wishlist items
+POST http://54.201.160.69:3208/api/list-wishlist
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+### get cart items
+POST http://54.201.160.69:3208/api/cart-product-list
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+### delete product
+POST http://54.201.160.69:3208/api/seller/deleteProduct
+x-access-token : {{access_token}}
+Content-Type: application/json
+
+{
+  "id" : 4511
+}
+
+### product details
+POST http://54.201.160.69:3208/api/detail-of-product
+x-access-token : {{access_token}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "product_id" : 4537
+}
+
+### get brands
+GET http://54.201.160.69:3208/api/getBrand
+Content-Type: application/json
+
+
+###login
+POST http://54.201.160.69:3208/api/login
+Content-Type: application/json
+
+{
+  "email" : "doe@gmail.com",
+  "password" : "123456"
+}
+
+###signup
+POST http://54.201.160.69:3208/api/signup
+Content-Type: application/json
+
+{
+    "email":"testuser1@gmail.com",
+    "first_name":"test",
+    "last_name":"user",
+    "username":"testuesrone",
+    "gender":"male",
+    "type":"2",
+    "password":"123"
+}
+
+###signup
+POST http://54.201.160.69:3208/api/listContentManagemnetAtUser
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+    "type":"terms"
+}
+
+### get states
+GET http://54.201.160.69:3208/api/getState
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+### get states
+POST http://54.201.160.69:3208/api/getCity
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "state_id" : 1456
+}
+
+### add shipping address
+POST http://54.201.160.69:3208/api/addShippingAddress
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+    "username":"neha",
+    "address":"123",
+    "zip_code":"123",
+    "country":"1",
+    "state":"1",
+    "city":"1"
+}
+
+### get states
+GET http://54.201.160.69:3208/api/getAllShippingAddress
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+### list of past searchs
+POST http://54.201.160.69:3208/api/list-searched-product
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+### list bids
+POST http://54.201.160.69:3208/api/bidList
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+    "limit" : 10,
+    "page" : 0
+}
+
+### seller bid list
+POST http://54.201.160.69:3208/api/sellerBidList
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "id" : "136"
+}
+
+### bid history
+POST http://54.201.160.69:3208/api/bidHistory
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+### update profile
+POST http://54.201.160.69:3208/api/updateProfile
+Content-Type: multipart/form-data
+x-access-token : {{access_token}}
+
+{
+  "first_name" : "Test3"
+}
+
+### 
+GET http://54.201.160.69:3208/api/getUserDetails
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+### 
+POST http://54.201.160.69:3208/api/wishlistusers
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+### 
+POST http://54.201.160.69:3208/api/getAllComments
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "product_id" : 4513
+}
+
+### x
+POST http://54.201.160.69:3208/api/sendComment
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "product_id" : 4513,
+  "message" : "Looks nice! shirt"
+}
+
+### x
+GET http://54.201.160.69:3208/api/getUserDetails
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+
+### payment
+POST http://54.201.160.69:3208/api/payment
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+    "price": 120000, 
+    "product_id": 4548,
+    "shipping_address_id": 55
+}
+
+### add order
+POST http://54.201.160.69:3208/api/add-order
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "paymentIntent_id": "pi_3LPKOBAq5oX68JYz0zmWRFDQ", 
+  "price": 1200, 
+  "product_id": 4550
+}
+
+### seller products
+POST http://54.201.160.69:3208/api/getAllSellerProduct
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "seller_id": "139"
+}
+
+### seller products
+POST http://54.201.160.69:3208/api/kyc
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "account_no": "000123456789",
+  "account_holder_name": "Test_bank",
+  "routing_no": "031201360",
+  "country_id": "233",
+  "state_id": "1416",
+  "city": "los angeles",
+  "address": "1419 Westwood Blvd",
+  "zip_code": "90001",
+  "email": "alexmarx@gmail.com",
+  "username": "alexmax"
+}
+
+### get colors by subcategory
+POST http://54.201.160.69:3208/api/getColorBySubcat
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "subcategory_id": 20
+}
+
+### get colors by subcategory
+POST http://54.201.160.69:3208/api/getSizeBySubcat
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "subcategory_id": 21
+}
+
+### get colors by subcategory
+POST http://54.201.160.69:3208/api/getSizeBySubcat
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "subcategory_id": 21
+}
+
+### get transactions
+POST http://54.201.160.69:3208/api/listTransaction
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+    "status":"0",
+    "sorting":"id|asc",
+    "search_key":"brw",
+    "page" : 0
+}
+
+### transaction detail
+POST http://54.201.160.69:3208/api/TransactionDetail
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+    "transaction_id":9
+}
+
+### test push notification
+
+POST http://54.201.160.69:3208/api/TestPushNotification
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+   "device_token" : "dgH2lHEvSpCxN1GXk8YdgO:APA91bFJRt_gWUeWA_iUrJMU69FkdCAUDzBzPrMt4dC6DXFClg0FPv2QXuM5lLEKzFmnjbO_OFFVW9Q7hL-UayLR9yIgg-RJ3QQupQGBlrrBUKr_ycGuby7wvjoB68ZWxli2EYd4SRQ0"
+}
+
+### notification
+GET http://54.201.160.69:3208/api/notificationList
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+### shipment
+POST http://54.201.160.69:3208/api/createGoShippo
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+  "order_id":81,
+  "length":"5",
+  "width":"5",
+  "height":"5",
+  "distance_unit":"in",
+  "weight":"2",
+  "mass_unit":"lb"
+}
+
+### shipmentTransaction 
+POST http://54.201.160.69:3208/api/createGoShippoTransaction
+Content-Type: application/json
+x-access-token : {{access_token}}
+
+{
+"rate_object_id":"fad42b11cd81491886edd2c0aecd8579",
+"order_id":105,
+"shipment_id": "c1defe4eb98f4bfba9e9f8e881d0b116"
+}

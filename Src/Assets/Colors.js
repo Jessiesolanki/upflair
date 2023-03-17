@@ -1,0 +1,23 @@
+export default Colors = {
+    backgroundColorW: '#FFFFFF',
+    sepration_lineColor:'#F0F0F0',
+    greenBtnColor:'#27AE60',
+    pinkColor: '#ff9999',
+    white: '#ffffff',
+    blackColor: '#000000',
+    black70 : '#555555',
+    black50 : '#999',
+    black30 : '#ddd',
+    black20 : '#eee',
+    black10 : '#f5f5f5',
+    textInputBGColor: '#fbfbfb',
+    darkGrey: '#8B8B8B',
+    lightGrey : '#bbb',
+    borderColor: '#8B8B8B',
+    headingTextColor: '#20130B',
+    subHeadingTextColor: '#8B8B8B',
+    green : 'rgb(99, 185, 155)',
+    veryLightGrey : '#f9f9f9',
+    facebook_blue : '#1877f2',
+    red : '#DC3545'
+}
